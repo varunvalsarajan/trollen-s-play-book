@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var actionButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     let imagePickerController = UIImagePickerController()
 
@@ -23,6 +25,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         topTextfield.isHidden = true
         bottomTextfield.isHidden = true
+        actionButton.isEnabled = false
+        cancelButton.isEnabled = false
  
         // Do any additional setup after loading the view.
     }

@@ -22,6 +22,20 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Trollen's Play Book" id="bmC-vy-8QQ">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Y2M-fF-fQc"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="V2q-2N-M1z"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W65-bt-GEo">
+                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="8tc-Dy-vTs">
+                                        <barButtonItem key="leftBarButtonItem" title="Albums" id="ZCZ-aw-R7q">
+                                            <connections>
+                                                <action selector="photoLibraryClicked:" destination="BYZ-38-t0r" id="4qU-Ra-g5k"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="k8l-Sv-9Vp">
                                             <connections>
                                                 <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" id="i2A-od-KDo"/>
@@ -30,32 +44,20 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W65-bt-GEo">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <items>
-                                    <navigationItem id="8tc-Dy-vTs">
-                                        <barButtonItem key="leftBarButtonItem" title="Photo Library" id="ZCZ-aw-R7q">
-                                            <connections>
-                                                <action selector="photoLibraryClicked:" destination="BYZ-38-t0r" id="4qU-Ra-g5k"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zsX-md-5GP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="681"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfT-f3-x4m">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfT-f3-x4m">
                                 <rect key="frame" x="30" y="118" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Cb6-vM-2hO"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdR-f9-Lbk">
-                                <rect key="frame" x="30" y="738" width="354" height="50"/>
+                                <rect key="frame" x="30" y="689" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1zO-9s-WGi"/>
                                 </constraints>
@@ -85,8 +87,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="actionButton" destination="Y2M-fF-fQc" id="KsR-cc-r6J"/>
                         <outlet property="bottomTextfield" destination="SdR-f9-Lbk" id="j8c-U3-LoS"/>
+                        <outlet property="cancelButton" destination="V2q-2N-M1z" id="bor-dM-fMA"/>
                         <outlet property="memeOriginalImage" destination="zsX-md-5GP" id="fvc-1M-Q2l"/>
                         <outlet property="topTextfield" destination="MfT-f3-x4m" id="Cog-Ly-BY4"/>
                     </connections>
