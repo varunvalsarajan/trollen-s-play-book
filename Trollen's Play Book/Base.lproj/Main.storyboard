@@ -48,21 +48,22 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="681"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfT-f3-x4m">
-                                <rect key="frame" x="30" y="118" width="354" height="50"/>
+                                <rect key="frame" x="30" y="188" width="354" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Cb6-vM-2hO"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdR-f9-Lbk">
-                                <rect key="frame" x="30" y="689" width="354" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdR-f9-Lbk">
+                                <rect key="frame" x="30" y="619" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1zO-9s-WGi"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -70,14 +71,14 @@
                         <constraints>
                             <constraint firstItem="W65-bt-GEo" firstAttribute="top" secondItem="zsX-md-5GP" secondAttribute="bottom" id="2I9-sp-66I"/>
                             <constraint firstItem="zsX-md-5GP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Fp-l8-d41"/>
-                            <constraint firstItem="W65-bt-GEo" firstAttribute="top" secondItem="SdR-f9-Lbk" secondAttribute="bottom" constant="30" id="Bx4-86-iNC"/>
+                            <constraint firstItem="W65-bt-GEo" firstAttribute="top" secondItem="SdR-f9-Lbk" secondAttribute="bottom" constant="100" id="Bx4-86-iNC"/>
                             <constraint firstItem="W65-bt-GEo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DXs-qP-sf8"/>
                             <constraint firstItem="cZz-9b-co6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QpM-bG-nOr"/>
                             <constraint firstItem="cZz-9b-co6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TDi-29-vcN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MfT-f3-x4m" secondAttribute="trailing" constant="30" id="XnP-Qd-Pqw"/>
                             <constraint firstItem="W65-bt-GEo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aQH-26-Cdb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zsX-md-5GP" secondAttribute="trailing" id="fOF-HB-nWj"/>
-                            <constraint firstItem="MfT-f3-x4m" firstAttribute="top" secondItem="cZz-9b-co6" secondAttribute="bottom" constant="30" id="heo-9A-8n2"/>
+                            <constraint firstItem="MfT-f3-x4m" firstAttribute="top" secondItem="cZz-9b-co6" secondAttribute="bottom" constant="100" id="heo-9A-8n2"/>
                             <constraint firstItem="SdR-f9-Lbk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="iAt-dm-4I4"/>
                             <constraint firstItem="MfT-f3-x4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="laY-HS-d71"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SdR-f9-Lbk" secondAttribute="trailing" constant="30" id="pFk-VE-hc2"/>

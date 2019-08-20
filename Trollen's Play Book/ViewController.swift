@@ -20,30 +20,42 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var memeOriginalImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
         imagePickerController.delegate = self
-        
-        topTextfield.isHidden = true
-        bottomTextfield.isHidden = true
+        topTextfield.backgroundColor = .clear
+        topTextfield.borderStyle = .none
+        bottomTextfield.backgroundColor = .clear
+        bottomTextfield.borderStyle = .none
         actionButton.isEnabled = false
         cancelButton.isEnabled = false
- 
         // Do any additional setup after loading the view.
+        //MARK: when presses outside the textfield
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+      
+        //MARK: adding observer to find the events
+        
+        
+        
     }
 
     
-    
+    //MARK: when presses camera button
     @IBAction func cameraButtonPressed(_ sender: Any) {
         
         imagePickerController.sourceType = .camera
         imagePickerController.allowsEditing = false
         
         present(imagePickerController, animated: true, completion: nil)
-        
-        
-    }
+        }
     
     
+    
+    
+    
+    //MARK: when presses album buttons
     @IBAction func photoLibraryClicked(_ sender: Any) {
         
         imagePickerController.sourceType = .photoLibrary
@@ -53,6 +65,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
     }
+    
+    //MARK: image picker delegate methods
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -68,6 +82,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
+    //MARK: tap objective c methods
+    
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    
+    }
+    
+    
+    
+    //textfield methods
+  
+    
+  
+
 
 }
 
