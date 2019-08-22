@@ -4,6 +4,10 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>We want to use camera </string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Here write description why you accessing photo library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>hey we use  photos</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

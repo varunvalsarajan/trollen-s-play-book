@@ -13,6 +13,7 @@
 		8B3F3648230B233B00ED1FEA /* Trollen_s_Play_Book.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F3646230B233B00ED1FEA /* Trollen_s_Play_Book.xcdatamodeld */; };
 		8B3F364A230B233E00ED1FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3F3649230B233E00ED1FEA /* Assets.xcassets */; };
 		8B3F364D230B233E00ED1FEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3F364B230B233E00ED1FEA /* LaunchScreen.storyboard */; };
+		8B954305230DD4E70077552D /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B954304230DD4E70077552D /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8B3F3649230B233E00ED1FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3F364C230B233E00ED1FEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B3F364E230B233E00ED1FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B954304230DD4E70077552D /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8B3F364B230B233E00ED1FEA /* LaunchScreen.storyboard */,
 				8B3F364E230B233E00ED1FEA /* Info.plist */,
 				8B3F3646230B233B00ED1FEA /* Trollen_s_Play_Book.xcdatamodeld */,
+				8B954304230DD4E70077552D /* Meme.swift */,
 			);
 			path = "Trollen's Play Book";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3F3642230B233B00ED1FEA /* ViewController.swift in Sources */,
+				8B954305230DD4E70077552D /* Meme.swift in Sources */,
 				8B3F3640230B233B00ED1FEA /* AppDelegate.swift in Sources */,
 				8B3F3648230B233B00ED1FEA /* Trollen_s_Play_Book.xcdatamodeld in Sources */,
 			);

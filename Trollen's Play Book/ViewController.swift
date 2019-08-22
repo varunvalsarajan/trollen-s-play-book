@@ -12,7 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var actionButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
-    
+    var memes  = [Meme]()
     let imagePickerController = UIImagePickerController()
 
     @IBOutlet weak var topTextfield: UITextField!
@@ -31,19 +31,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         cancelButton.isEnabled = false
         topTextfield.delegate = self
         bottomTextfield.delegate = self
-        // Do any additional setup after loading the view.
+      
+        
         //MARK: when presses outside the textfield
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
       
-        //MARK: adding observer to find the events
         
         
         
     }
     
-
+    //MARK: text field delegate methods
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if(textField.tag == 1){
@@ -121,6 +121,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         topTextfield.isHidden = false
         bottomTextfield.isHidden = false
+        actionButton.isEnabled = true
         
     }
     
@@ -134,8 +135,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     }
     
+    func generateMemedImage() -> UIImage {
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        return memedImage
+    }
     
     
+    
+    
+    
+    @IBAction func saveMeme(_ sender: UIBarButtonItem) {
+        
+        let ourMeme = Meme()
+        ourMeme.topText = topTextfield.text!
+        ourMeme.bottomText = bottomTextfield.text!
+        ourMeme.originalImage = memeOriginalImage.image!
+        ourMeme.memedImage = self.generateMemedImage()
+        memes.append(ourMeme)
+        let activityController = UIActivityViewController(activityItems: [ourMeme.memedImage], applicationActivities: nil)
+        
+        present(activityController, animated: true)
+        
+    }
     //textfield methods
   
     
