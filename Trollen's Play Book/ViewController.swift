@@ -12,8 +12,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var actionButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
-    var memes  = [Meme]()
+    //var memes  = [Meme]()
     let imagePickerController = UIImagePickerController()
+    let defaults = UserDefaults.standard
 
     @IBOutlet weak var topTextfield: UITextField!
     @IBOutlet weak var bottomTextfield: UITextField!
@@ -117,11 +118,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
         memeOriginalImage.image = image
-        dismiss(animated: true, completion: nil)
-        
         topTextfield.isHidden = false
         bottomTextfield.isHidden = false
         actionButton.isEnabled = true
+        
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    
         
     }
     
@@ -151,16 +155,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func saveMeme(_ sender: UIBarButtonItem) {
-        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
         let ourMeme = Meme()
         ourMeme.topText = topTextfield.text!
         ourMeme.bottomText = bottomTextfield.text!
         ourMeme.originalImage = memeOriginalImage.image!
         ourMeme.memedImage = self.generateMemedImage()
-        memes.append(ourMeme)
+        appDelegate.memes.append(ourMeme)
         let activityController = UIActivityViewController(activityItems: [ourMeme.memedImage], applicationActivities: nil)
+        activityController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems:[Any]?, error: Error?) in
+            
+            if(activityType == UIActivity.ActivityType.saveToCameraRoll){
+              self.performSegue(withIdentifier: "wayToTab", sender: self)
+            }
+            //Do whatever you want
+        }
+            
         
+     
+
         present(activityController, animated: true)
+        
+       
         
     }
     //textfield methods
